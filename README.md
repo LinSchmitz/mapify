@@ -6,17 +6,19 @@ The project demonstrates advanced JavaScript concepts including Object-Oriented 
 
 ---
 
-## 🚀 Live Demo
+## 🚀 [Live Demo](#)
 
-## [Live Demo](#)
+---
 
-## 📷 Photos
+## 📸 Screenshots
 
 ## ![Photos](map.png)
 
+---
+
 ## 📌 Overview
 
-Mapty enables users to track outdoor workouts by selecting locations directly on a map and storing workout information locally in the browser.
+Mapify enables users to track outdoor workouts by selecting locations directly on a map and storing workout information locally in the browser.
 
 Each workout is represented by a marker on the map and includes activity-specific metrics such as pace, speed, cadence, and elevation gain.
 
@@ -130,7 +132,7 @@ Workout
 ## 📂 Project Structure
 
 ```text
-mapty/
+mapify/
 │
 ├── index.html
 ├── style.css
@@ -146,13 +148,13 @@ mapty/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/mapty.git
+git clone https://github.com/yourusername/mapify.git
 ```
 
 ### Navigate to Project
 
 ```bash
-cd mapty
+cd mapify
 ```
 
 ### Run Application
@@ -164,8 +166,6 @@ npx serve
 ```
 
 ---
-
-## 📸 Screenshots
 
 ### Main Interface
 
