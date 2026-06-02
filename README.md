@@ -1,82 +1,135 @@
-# 🗺️ Mapify
+# 🗺️ Mapify – Workout Tracking Application
 
-![Map](map.png)
-Track your workouts on an interactive map.
+A modern workout tracking application built with Vanilla JavaScript that allows users to record and visualize running and cycling activities on an interactive map.
 
-Mapty is a web application that allows users to log and visualize their running and cycling workouts directly on a map. The app uses geolocation and interactive maps to provide a simple and intuitive way to track outdoor activities.
+The project demonstrates advanced JavaScript concepts including Object-Oriented Programming (OOP), browser APIs, state management, and persistent client-side storage.
 
-## ✨ Features
+---
 
-- 📍 Detect your current location using Geolocation API
-- 🏃 Log running workouts
-- 🚴 Log cycling workouts
-- 🗺️ Display workouts on an interactive map
-- 📝 Store workout details:
-  - Distance
-  - Duration
-  - Pace
-  - Speed
-  - Cadence
-  - Elevation Gain
+## 🚀 Live Demo
 
-- 💾 Persist data using Local Storage
-- 🎯 Click a workout to move the map to its location
-- 📱 Responsive and user-friendly interface
+## [Live Demo](#)
 
-## 🛠️ Built With
+## 📷 Photos
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- OOP (Object-Oriented Programming)
-- Local Storage API
-- Geolocation API
-- Leaflet.js
+## ![Photos](map.png)
 
-## 📸 Screenshots
+## 📌 Overview
 
-Add screenshots of your application here.
+Mapty enables users to track outdoor workouts by selecting locations directly on a map and storing workout information locally in the browser.
 
-```bash
-screenshots/
-├── map-view.png
-├── workout-form.png
-└── mobile-view.png
+Each workout is represented by a marker on the map and includes activity-specific metrics such as pace, speed, cadence, and elevation gain.
+
+The application leverages modern JavaScript architecture and browser APIs to provide a smooth user experience without relying on external frameworks.
+
+---
+
+## ✨ Key Features
+
+### 🏃 Running Workouts
+
+- Record running sessions
+- Track distance and duration
+- Calculate pace automatically
+- Store cadence data
+
+### 🚴 Cycling Workouts
+
+- Record cycling sessions
+- Track distance and duration
+- Calculate average speed
+- Store elevation gain
+
+### 🗺️ Interactive Mapping
+
+- Automatic user location detection
+- Place workouts directly on the map
+- Navigate to workout locations
+- Dynamic marker rendering
+
+### 💾 Data Persistence
+
+- Save workouts in Local Storage
+- Restore workout history after page refresh
+- Maintain workout state across sessions
+
+### 🎯 User Experience
+
+- Instant form validation
+- Smooth map navigation
+- Responsive layout
+- Intuitive workout management
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology        | Purpose           |
+| ----------------- | ----------------- |
+| HTML5             | Structure         |
+| CSS3              | Styling & Layout  |
+| JavaScript (ES6+) | Application Logic |
+| Leaflet.js        | Interactive Maps  |
+| Geolocation API   | User Location     |
+| Local Storage API | Data Persistence  |
+
+---
+
+## 🧠 Advanced JavaScript Concepts
+
+This project was built to practice and demonstrate:
+
+- Object-Oriented Programming (OOP)
+- ES6 Classes
+- Inheritance
+- Encapsulation
+- Private Fields & Methods
+- Event Delegation
+- Browser APIs
+- State Management
+- DOM Manipulation
+- Data Validation
+- Functional Array Methods
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+Workout
+├── Running
+│   ├── cadence
+│   └── pace
+│
+└── Cycling
+    ├── elevationGain
+    └── speed
 ```
 
-## 🚀 Getting Started
+### Main Components
 
-### Clone the repository
+- **Workout Class**
+  - Base class containing shared workout properties.
 
-```bash
-git clone https://github.com/yourusername/mapify.git
-```
+- **Running Class**
+  - Extends Workout.
+  - Calculates running pace.
 
-### Navigate to the project directory
+- **Cycling Class**
+  - Extends Workout.
+  - Calculates cycling speed.
 
-```bash
-cd mapty
-```
+- **App Class**
+  - Handles application state.
+  - Manages map interactions.
+  - Controls data persistence.
+  - Handles UI rendering.
 
-### Run locally
-
-Since this project uses browser APIs, it's recommended to run it using a local server.
-
-Using VS Code Live Server:
-
-```bash
-Right Click → Open with Live Server
-```
-
-Or using npm:
-
-```bash
-npx serve
-```
+---
 
 ## 📂 Project Structure
 
-```bash
+```text
 mapty/
 │
 ├── index.html
@@ -86,32 +139,77 @@ mapty/
 └── README.md
 ```
 
-## 🧠 Concepts Practiced
+---
 
-This project demonstrates:
+## ⚙️ Installation
 
-- Classes and Inheritance
-- Encapsulation
-- Private Fields
-- Method Chaining
-- DOM Manipulation
-- Event Handling
-- Geolocation API
-- Local Storage
-- Array Methods
-- Clean Code Principles
+### Clone Repository
 
-## 🎯 Future Improvements
+```bash
+git clone https://github.com/yourusername/mapty.git
+```
 
-- Edit workouts
-- Delete individual workouts
-- Sort workouts
-- Filter workouts
-- Dark mode
-- Export/Import workouts
+### Navigate to Project
+
+```bash
+cd mapty
+```
+
+### Run Application
+
+Use VS Code Live Server or any local server:
+
+```bash
+npx serve
+```
+
+---
+
+## 📸 Screenshots
+
+### Main Interface
+
+Add your screenshot here.
+
+```text
+screenshots/
+├── dashboard.png
+├── workout-marker.png
+└── mobile-view.png
+```
+
+---
+
+## 🔮 Future Enhancements
+
+- Edit existing workouts
+- Delete single workouts
+- Sort and filter workouts
+- Dark mode support
+- Export workout data
+- Import workout history
+- Cloud synchronization
 - User authentication
-- Backend database integration
+- Backend integration
+- Progressive Web App (PWA)
 
-## 📖 Learning Project
+---
 
-This project was originally built as part of the JavaScript course by Jonas Schmedtmann and further customized for learning modern JavaScript and OOP concepts.
+## 📈 What I Learned
+
+During this project I gained practical experience with:
+
+- Designing applications using OOP principles
+- Working with real-world browser APIs
+- Managing application state without frameworks
+- Persisting data in the browser
+- Building interactive map-based interfaces
+- Writing maintainable and modular JavaScript code
+
+---
+
+## 🙏 Acknowledgments
+
+This project was originally inspired by and built while following the JavaScript course by Jonas Schmedtmann, with additional improvements and customization for learning purposes.
+
+---
