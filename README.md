@@ -1,8 +1,10 @@
 # 🗺️ Mapify – Workout Tracking Application
 
-A modern workout tracking application built with Vanilla JavaScript that allows users to record and visualize running and cycling activities on an interactive map.
+Mapify is a modern workout tracking application built with Vanilla JavaScript that allows users to record and visualize running and cycling activities on an interactive map. Users can log workouts by selecting locations directly on the map, while the application automatically stores workout data locally in the browser for future sessions.
 
-The project demonstrates advanced JavaScript concepts including Object-Oriented Programming (OOP), browser APIs, state management, and persistent client-side storage.
+Each workout is displayed as a marker on the map and includes activity-specific metrics such as distance, duration, pace, speed, cadence, and elevation gain. The project leverages modern JavaScript architecture, browser APIs, and Object-Oriented Programming (OOP) principles to deliver a smooth and responsive user experience without relying on external frameworks.
+
+Beyond its practical functionality, Mapify serves as a demonstration of advanced JavaScript concepts, including OOP, state management, browser APIs, and persistent client-side storage.
 
 ---
 
@@ -13,16 +15,6 @@ The project demonstrates advanced JavaScript concepts including Object-Oriented 
 ## 📸 Screenshots
 
 ## ![Photos](map.png)
-
----
-
-## 📌 Overview
-
-Mapify enables users to track outdoor workouts by selecting locations directly on a map and storing workout information locally in the browser.
-
-Each workout is represented by a marker on the map and includes activity-specific metrics such as pace, speed, cadence, and elevation gain.
-
-The application leverages modern JavaScript architecture and browser APIs to provide a smooth user experience without relying on external frameworks.
 
 ---
 
