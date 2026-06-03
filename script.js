@@ -308,7 +308,6 @@ class App {
 
   _getLocalStorage() {
     const data = JSON.parse(localStorage.getItem('workouts'));
-    // console.log(data);
 
     if (!data) return;
 
@@ -317,6 +316,12 @@ class App {
     this.#workouts.forEach(work => {
       this._renderWorkout(work);
     });
+  }
+
+  //reset local storage from console
+  reset() {
+    localStorage.removeItem('workouts');
+    location.reload();
   }
 }
 
