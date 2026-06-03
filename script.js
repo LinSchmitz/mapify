@@ -116,6 +116,10 @@ class App {
 
     // Get data from form
 
+    const type = inputType.value;
+    const duration = +inputDuration.value;
+    const distance = +inputDistance.value;
+
     // If workout running, create running object
 
     // If workout cycling, create cycling object
@@ -123,18 +127,7 @@ class App {
     // Add new object to workout array
 
     // Render workout on map as marker
-
-    // Render workout on list
-
-    // Hide form + clear input fields
     const { lat, lng } = this.#mapEvent.latlng;
-
-    //clear input
-    inputCadence.value =
-      inputDistance.value =
-      inputDuration.value =
-      inputElevation.value =
-        '';
 
     L.marker([lat, lng])
       .addTo(this.#map)
@@ -149,6 +142,15 @@ class App {
       )
       .setPopupContent('Workout')
       .openPopup();
+    // Render workout on list
+
+    // Hide form + clear input fields
+
+    inputCadence.value =
+      inputDistance.value =
+      inputDuration.value =
+      inputElevation.value =
+        '';
   }
 }
 
