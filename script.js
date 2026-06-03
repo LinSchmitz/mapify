@@ -112,6 +112,9 @@ class App {
   }
 
   _newWorkout(e) {
+    const validInputs = (...inputs) =>
+      inputs.every(inp => Number.isFinite(inp));
+
     e.preventDefault();
 
     // Get data from form
@@ -122,11 +125,25 @@ class App {
 
     // If workout running, create running object
 
+    if (type === 'running') {
+      const cadence = +inputCadence.value;
+      // Check if data is valid
+      if (!validInputs(distance, duration, cadence))
+        return alert('Inputs have to be positive numbers!');
+    }
+
     // If workout cycling, create cycling object
+
+    if (type === 'cycling') {
+      const elevation = +inputElevation.value;
+      if (!validInputs(distance, duration, elevation))
+        return alert('Inputs have to be positive numbers!');
+    }
 
     // Add new object to workout array
 
     // Render workout on map as marker
+
     const { lat, lng } = this.#mapEvent.latlng;
 
     L.marker([lat, lng])
