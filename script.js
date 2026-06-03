@@ -12,6 +12,7 @@ const inputElevation = document.querySelector('.form__input--elevation');
 class Workout {
   date = new Date();
   id = (Date.now() + '').slice(-10);
+  clicks = 0;
 
   constructor(coords, distance, duration) {
     this.coords = coords; //[lat,lng]
@@ -26,6 +27,10 @@ class Workout {
     this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${
       months[this.date.getMonth()]
     } ${this.date.getDate()}`;
+  }
+
+  click() {
+    this.clicks++;
   }
 }
 
@@ -65,7 +70,7 @@ class Cycling extends Workout {
 
 const run1 = new Running([39, -12], 5.2, 24, 170);
 const cycling1 = new Cycling([39, -12], 27, 95, 523);
-console.log(run1, cycling1);
+// console.log(run1, cycling1);
 //////////////////////////
 //Aplication Architecture
 //////////////////////////
@@ -96,11 +101,11 @@ class App {
     {
       const { latitude } = position.coords;
       const { longitude } = position.coords;
-      console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
+      // console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
 
       const coords = [latitude, longitude];
 
-      console.log(this);
+      // console.log(this);
       this.#map = L.map('map').setView(coords, this.#mapZoomLevel);
 
       L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -182,7 +187,7 @@ class App {
     // Add new object to workout array
 
     this.#workouts.push(workout);
-    console.log(workout);
+    // console.log(workout);
 
     // Render workout on map as marker
 
@@ -279,6 +284,9 @@ class App {
         duration: 1,
       },
     });
+
+    // using the public interface
+    workout.click();
   }
 }
 
